@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for light mode -->
+    <style name="Base.Theme.MarriageVendors" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here -->
+    </style>
+
+    <style name="Theme.MarriageVendors" parent="Base.Theme.MarriageVendors" />
+
+    <!-- Custom style for the search button -->
+    <style name="SearchButtonStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/search_button_pink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+</resources>

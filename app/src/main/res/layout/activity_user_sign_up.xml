@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Account | Marriage Vendors"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Username Label -->
+        <TextView
+            android:id="@+id/username_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Username Input -->
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_menu_myplaces"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/username_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Email Label -->
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/username_input"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/email_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Password Label -->
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/email_input"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="173dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/confirm_password_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/confirm_password_input" />
+
+        <!-- Confirm Password Label -->
+
+        <!-- Confirm Password Input -->
+        <TextView
+            android:id="@+id/confirm_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Confirm Password"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintStart_toEndOf="@id/password_label"
+            app:layout_constraintTop_toBottomOf="@id/email_input" />
+
+        <EditText
+            android:id="@+id/confirm_password_input"
+            android:layout_width="191dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="8dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/password_input"
+            app:layout_constraintTop_toBottomOf="@id/confirm_password_label" />
+
+        <!-- Event Location Label -->
+        <TextView
+            android:id="@+id/event_location_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Location"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/password_input"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Event Location Input -->
+
+        <!-- Phone Number Label -->
+
+        <EditText
+            android:id="@+id/event_location_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_menu_mylocation"
+            android:drawablePadding="8dp"
+            android:hint="Event Location"
+            android:inputType="text"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/phone_number_label"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/phone_number_input" />
+
+        <TextView
+            android:id="@+id/phone_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/confirm_password_input"
+            app:layout_constraintStart_toEndOf="@id/event_location_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Phone Number Input -->
+
+        <!-- Event Date Label -->
+
+        <EditText
+            android:id="@+id/phone_number_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_menu_call"
+            android:drawablePadding="8dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/event_location_input"
+            app:layout_constraintTop_toBottomOf="@id/phone_number_label" />
+
+        <TextView
+            android:id="@+id/event_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Date"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/event_location_input"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Event Date Input -->
+        <EditText
+            android:id="@+id/event_date_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="dd-mm-yyyy"
+            android:inputType="date"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_menu_my_calendar"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/event_date_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Terms and Conditions Checkbox -->
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree with the terms and conditions."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/event_date_input"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/sign_up_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E91E63"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_checkbox" />
+
+        <!-- Divider with "or" -->
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Login with Google Button -->
+        <Button
+            android:id="@+id/google_login_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Login with Google"
+            android:textColor="@android:color/black"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Login Link -->
+        <TextView
+            android:id="@+id/login_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textSize="14sp"
+            android:textColor="#FF4081"
+            app:layout_constraintTop_toBottomOf="@id/google_login_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
