@@ -2,6 +2,7 @@ package com.example.marriagevendors;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
@@ -50,12 +51,12 @@ public class LandingActivity extends AppCompatActivity {
         toggle.syncState();
 
         // Header data
-        View headerView = expandableListView.getRootView().findViewById(R.id.user_name);
-        TextView userNameTextView = drawer.findViewById(R.id.user_name);
-        TextView userRoleTextView = drawer.findViewById(R.id.user_role);
+        // Access header views from the included nav_header layout
+        View headerView = findViewById(R.id.nav_header); // Find the included layout
+        TextView userNameTextView = headerView != null ? headerView.findViewById(R.id.user_name) : null;
+        TextView userRoleTextView = headerView != null ? headerView.findViewById(R.id.user_role) : null;
         if (userNameTextView != null) {
             userNameTextView.setText(userName);
-            // Make the user name clickable to navigate to UserProfileActivity
             userNameTextView.setOnClickListener(v -> {
                 Intent intent = new Intent(LandingActivity.this, UserProfileActivity.class);
                 startActivity(intent);
@@ -77,25 +78,28 @@ public class LandingActivity extends AppCompatActivity {
         // Handle group (top-level) clicks
         expandableListView.setOnGroupClickListener((parent, v, groupPosition, id) -> {
             String group = listGroupTitles.get(groupPosition);
-            // Only navigate if the group has no children (i.e., it's a top-level item like "Blog")
+            Log.d("LandingActivity", "Group clicked: " + group);
             if (!listChildData.containsKey(group)) {
                 Intent intent = getNavigationIntent(group, null);
                 if (intent != null) {
                     startActivity(intent);
                     drawer.closeDrawer(GravityCompat.START);
                 }
-                return true; // Consume the click event for top-level items
+                return true;
             }
-            return false; // Allow ExpandableListView to handle expandable groups
+            return false;
         });
 
         // Handle child clicks (for expandable groups like "Venue")
         expandableListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
             String group = listGroupTitles.get(groupPosition);
             String child = listChildData.get(group).get(childPosition);
+            Log.d("LandingActivity", "Child clicked: " + group + " > " + child);
             Intent intent = getNavigationIntent(group, child);
-            if (intent != null) startActivity(intent);
-            drawer.closeDrawer(GravityCompat.START);
+            if (intent != null) {
+                startActivity(intent);
+                drawer.closeDrawer(GravityCompat.START);
+            }
             return true;
         });
     }
@@ -126,6 +130,7 @@ public class LandingActivity extends AppCompatActivity {
     }
 
     private Intent getNavigationIntent(String group, String child) {
+        Log.d("LandingActivity", "Navigating to: " + group + (child != null ? " > " + child : ""));
         switch (group) {
             case "Home":
                 return null; // already on home

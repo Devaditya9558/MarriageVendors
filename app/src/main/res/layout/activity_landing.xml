@@ -253,7 +253,9 @@
         android:layout_gravity="start"
         android:background="@color/white">
 
-        <include layout="@layout/nav_header" />
+        <include
+            android:id="@+id/nav_header"
+            layout="@layout/nav_header" />
 
         <ExpandableListView
             android:id="@+id/expandableListView"

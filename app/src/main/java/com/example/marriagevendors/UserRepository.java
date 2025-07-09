@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UserRepository {
     private ApiService apiService;
-    private static final String BASE_URL = "http://192.168.1.6:4000/"; // Updated with your computer's IP
+    private static final String BASE_URL = "http://192.168.1.6:4000/api/v1"; // Updated with your computer's IP
 
     public UserRepository() {
         // Create a logging interceptor

@@ -10,28 +10,82 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
-    android:theme="@style/Theme.MarriageVendors">
-    <activity
-        android:name=".AdminActivity"
-        android:exported="false" />
-    <activity android:name=".UserLogin" />
-    <activity android:name=".WeddingLawnsActivity" />
-    <activity android:name=".WeddingPhotographersActivity" />
-    <activity android:name=".InvitationActivity" />
-    <activity android:name=".BlogActivity" />
-    <activity android:name=".UserSignUpActivity" />
-    <activity android:name=".UserProfileActivity" />
-    <activity android:name=".MainActivity" />
-    <activity android:name=".LandingActivity" />
-    <activity
-        android:name=".SplashActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+        android:theme="@style/Theme.MarriageVendors"
+        android:networkSecurityConfig="@xml/network_security_config">
 
-    </manifest>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LandingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserLogin"
+            android:exported="false" />
+        <activity
+            android:name=".UserSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvitationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeddingLawnsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmhouseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HotelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BanquetHallsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaterersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeddingDecorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeddingPhotographersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeddingDJActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BridalLehengaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BridalJewelleryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BridalMakeupArtistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SherwaniActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MensGroomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MensAccessoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VendorActivity"
+            android:exported="false" />
+    </application>
+</manifest>

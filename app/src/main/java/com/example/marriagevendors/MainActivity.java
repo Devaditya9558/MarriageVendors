@@ -1,7 +1,7 @@
 package com.example.marriagevendors;
 
+import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Navigate to LandingActivity
+        startActivity(new Intent(MainActivity.this, LandingActivity.class));
+        finish();
     }
 }
